@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luzine Store</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#0f0f0f;
+color:white;
+}
+
+/* HEADER */
+header{
+background:linear-gradient(90deg,#6a00ff,#b300ff);
+padding:20px;
+text-align:center;
+font-size:28px;
+font-weight:bold;
+letter-spacing:2px;
+box-shadow:0 0 20px rgba(179,0,255,0.5);
+}
+
+/* BOTÃO MENU */
+.menu-btn{
+position:fixed;
+top:20px;
+left:20px;
+background:#6a00ff;
+border:none;
+color:white;
+padding:12px 15px;
+border-radius:8px;
+font-size:18px;
+cursor:pointer;
+z-index:1001;
+}
+
+/* ABA LATERAL */
+.sidebar{
+position:fixed;
+left:-300px;
+top:0;
+width:300px;
+height:100%;
+background:#111;
+box-shadow:5px 0 15px rgba(0,0,0,0.5);
+padding:20px;
+transition:0.3s;
+z-index:1000;
+}
+
+.sidebar.active{
+left:0;
+}
+
+.fechar-btn{
+background:red;
+border:none;
+color:white;
+padding:10px 15px;
+border-radius:8px;
+cursor:pointer;
+margin-bottom:20px;
+}
+
+.whatsapp{
+display:block;
+margin-top:20px;
+background:#25D366;
+padding:15px;
+text-align:center;
+border-radius:10px;
+color:white;
+text-decoration:none;
+font-size:18px;
+}
+
+/* PRODUTOS */
+.container{
+padding:40px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.produto{
+background:#1a1a1a;
+border-radius:15px;
+padding:20px;
+text-align:center;
+transition:0.3s;
+box-shadow:0 0 15px rgba(106,0,255,0.3);
+}
+
+.produto:hover{
+transform:scale(1.05);
+box-shadow:0 0 25px rgba(179,0,255,0.7);
+}
+
+.produto img{
+width:100%;
+border-radius:10px;
+}
+
+.nome{
+font-size:20px;
+margin:15px 0;
+}
+
+.preco{
+color:#00ff88;
+font-size:22px;
+margin-bottom:15px;
+font-weight:bold;
+}
+
+button{
+background:linear-gradient(90deg,#6a00ff,#b300ff);
+border:none;
+padding:12px 20px;
+border-radius:8px;
+color:white;
+font-size:16px;
+cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:20px;
+background:#111;
+margin-top:40px;
+opacity:0.7;
+}
+</style>
+</head>
+
+<body>
+
+<!-- BOTÃO ABRIR -->
+<button class="menu-btn" onclick="abrirMenu()">☰</button>
+
+<!-- ABA LATERAL -->
+<div class="sidebar" id="menu">
+<button class="fechar-btn" onclick="fecharMenu()">Fechar</button>
+
+<h2>Suporte</h2>
+<p>WhatsApp: (35) 99891-1405</p>
+
+<a class="whatsapp" href="https://wa.me/5535998911405" target="_blank">
+📱 Chamar no WhatsApp
+</a>
+</div>
+
+<header>
+🛒 LUZINE STORE
+</header>
+
+<section class="container">
+
+<div class="produto">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo7IURp8RJyBYHHL_5Lpw8nsSZ6LCNFoGLLNHfjHadhQ&s">
+<div class="nome">liquidficador eletrico recarregavel</div>
+<div class="preco">R$ 69,99</div>
+<button>Comprar</button>
+</div>
+
+<div class="produto">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsDqcpXvcpj_LxblLvOBpuTzGre1KEgvbgIExpNm9PVw&s=10">
+<div class="nome">fone sem fio twn recarregavel</div>
+<div class="preco">R$ 45,90</div>
+<button>Comprar</button>
+</div>
+
+<div class="produto">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDeCR_CttF-LVjs6hMgQr_CHIpwojoRSIOYD-oC03qCg&s=10">
+<div class="nome">ring light </div>
+<div class="preco">R$ 69,90</div>
+<button>Comprar</button>
+</div>
+
+<div class="produto">
+<img src="https://down-br.img.susercontent.com/file/sg-11134201-7rcct-lsy1pla5gp3lad@resize_w423_nl.webp">
+<div class="nome">relogio smartwatch adroid e ios inteligente y68 coloca foto</div>
+<div class="preco">R$ 42,90</div>
+<button>Comprar</button>
+</div>
+
+</section>
+
+<footer>
+© 2026 Luzine — Todos os direitos reservados
+</footer>
+
+<script>
+function abrirMenu(){
+document.getElementById("menu").classList.add("active");
+}
+
+function fecharMenu(){
+document.getElementById("menu").classList.remove("active");
+}
+</script>
+
+</body>
+  </html>
