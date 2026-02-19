@@ -157,49 +157,49 @@ opacity:0.7;
 <p>WhatsApp: (35) 99891-1405</p>
 
 <a class="whatsapp" href="https://wa.me/5535998911405" target="_blank">
- Chamar no WhatsApp
+Chamar no WhatsApp
 </a>
 </div>
 
 <header>
- LUZINE STORE
+LUZINE STORE
 </header>
 
 <section class="container">
 
 <div class="produto">
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo7IURp8RJyBYHHL_5Lpw8nsSZ6LCNFoGLLNHfjHadhQ&s">
-<div class="nome">liquidificador elétrico recarregável</div>
+<div class="nome">Liquidificador elétrico recarregável</div>
 <div class="preco">R$ 69,99</div>
-<button>Comprar</button>
+<button onclick="comprarProduto('Liquidificador elétrico recarregável','R$ 69,99')">Comprar</button>
 </div>
 
 <div class="produto">
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsDqcpXvcpj_LxblLvOBpuTzGre1KEgvbgIExpNm9PVw&s=10">
-<div class="nome">fone de ouvidos tws Bluetooth 5.0 recarregável</div>
+<div class="nome">Fone de ouvidos TWS Bluetooth 5.0 recarregável</div>
 <div class="preco">R$ 45,90</div>
-<button>Comprar</button>
+<button onclick="comprarProduto('Fone de ouvidos TWS Bluetooth 5.0','R$ 45,90')">Comprar</button>
 </div>
 
 <div class="produto">
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDeCR_CttF-LVjs6hMgQr_CHIpwojoRSIOYD-oC03qCg&s=10">
-<div class="nome">ring light portátil iluminador led usb 26cm</div>
+<div class="nome">Ring Light portátil iluminador LED USB 26cm</div>
 <div class="preco">R$ 69,90</div>
-<button>Comprar</button>
+<button onclick="comprarProduto('Ring Light portátil LED 26cm','R$ 69,90')">Comprar</button>
 </div>
 
 <div class="produto">
 <img src="https://down-br.img.susercontent.com/file/sg-11134201-7rcct-lsy1pla5gp3lad@resize_w423_nl.webp">
-<div class="nome">relógio smartwatch Android e Ios inteligentes y68 coloca foto</div>
+<div class="nome">Relógio Smartwatch Android e iOS Y68</div>
 <div class="preco">R$ 42,90</div>
-<button>Comprar</button>
+<button onclick="comprarProduto('Relógio Smartwatch Android e iOS Y68','R$ 42,90')">Comprar</button>
 </div>
 
 </section>
 
 <footer>
 © 2026 Luzine — Todos os direitos reservados
-  Os ítens vendidos são fornecidos pelas lojas vizinhas
+Os ítens vendidos são fornecidos pelas lojas vizinhas
 </footer>
 
 <script>
@@ -210,7 +210,24 @@ document.getElementById("menu").classList.add("active");
 function fecharMenu(){
 document.getElementById("menu").classList.remove("active");
 }
+
+/* SISTEMA CORRIGIDO WHATSAPP */
+function comprarProduto(nome, preco){
+
+let mensagem =
+"Olá, quero comprar este produto:\n\n" +
+"📦 Produto: " + nome + "\n" +
+"💰 Preço: " + preco + "\n\n" +
+"Encontrei no site Luzine Store";
+
+let numero = "5535998911405";
+
+/* codifica corretamente acentos e emojis */
+let url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(mensagem);
+
+window.open(url, "_blank");
+}
 </script>
 
 </body>
-  </html>
+</html>
